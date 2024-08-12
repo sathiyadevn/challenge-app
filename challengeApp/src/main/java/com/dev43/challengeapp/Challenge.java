@@ -1,9 +1,19 @@
 package com.dev43.challengeapp;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Challenge {
+    @Id
     private Long id;
-    private String month;
+    @Column(name = "challengeMonth")
+    private String month;       // month - Reserved word in DB
     private String description;
+
+    public Challenge() {
+    }
 
     public Challenge(Long id, String month, String description) {
         this.id = id;
