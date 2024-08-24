@@ -1,12 +1,11 @@
 package com.dev43.challengeapp;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Challenge {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "challengeMonth")
     private String month;       // month - Reserved word in DB
